@@ -1,0 +1,230 @@
+//引入默认配置
+@import "default";
+
+//引入公共颜色
+@import "common-color";
+
+//修改组件默认样式
+@import "ant-design";
+
+.ant-layout {
+  height: 100%;
+  background:$bg-f5f5f5!important;
+  .ant-layout-header {
+    background-color: $bg-color !important;
+    height: 64px;
+    line-height: 64px;
+    .header-title,
+    .header-icon {
+      font-size: 22px;
+      color: $bg-fff;
+    }
+    .ant-col {
+      height: 64px;
+    }
+    .common-menu {
+      height: 64px;
+
+      .ant-menu {
+        // height: 100%;
+        // line-height: 64px;
+        .ant-menu-item {
+          background-color: $bg-color;
+          border-bottom: none;
+          // width: 120px;
+          height: 64px;
+          text-align: center;
+          top: 0px;
+          a {
+            color: $bg-fff !important;
+            font-weight: 500;
+            height: 64px;
+            line-height: 64px;
+            &::before {
+              bottom: 0px;
+            }
+          }
+        }
+        .ant-menu-item-selected {
+          background-color: #085ae3;
+          // border-bottom: none;
+        }
+      }
+    }
+    .header-info {
+      color: $bg-fff;
+      line-height: 64px;
+      .ant-badge {
+        color: $bg-fff;
+        font-size: 18px;
+        top: 4px;
+      }
+      .anticon{
+        font-size: 18px;
+      }
+      .ant-col {
+        color: $bg-fff;
+      }
+    }
+  }
+  .ant-layout-content {
+    .my-sub-menu {
+      height: 48px;
+      background: #fff;
+
+      box-shadow: 0px 2px 8px 0px rgba(139, 148, 169, 0.2);
+      .ant-menu {
+        height: 48px;
+        line-height: 48px;
+  
+      }
+      a {
+        color: $bg-font;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .ant-menu-item-selected {
+        a {
+          color: $bg-color;
+        }
+      }
+    }
+    // background:
+    .common-box {
+      // margin: 36px 40px 0;
+
+      margin-top: 2px;
+      background-color: $bg-fff;
+      height: 94.2%;
+      // min-height: 777px;
+      .common-title {
+        // height: 56px;
+        // height: 5.7%;
+        padding: 0 32px;
+        line-height: 56px;
+        border-bottom: 1px solid $bg-line !important;
+        font-size: 16px;
+        color: $bg-black;
+        font-weight: 500;
+        .ant-col {
+          margin-right: 16px;/*no*/
+        }
+      }
+      .content-box {
+        height: 100%;
+        background: $bg-f5f5f5;
+        .content-left {
+          width: 240px;
+          min-width: 216px; /*no*/
+          background-color: $bg-fff;
+
+          box-shadow: 2px 0px 8px 0px rgba(139, 148, 169, 0.2);
+          .content-left-where {
+            // width:100%;
+            padding: 16px;
+            border-bottom: 1px solid $bg-line;
+            .ant-col {
+              margin-bottom: 8px;
+              .ant-btn {
+                width: 100%;
+                letter-spacing: 2px;
+              }
+            }
+          }
+          .content-left-list {
+            padding-left: 16px;
+          }
+        }
+        .content-right {
+          flex: 1;
+          width:1680px;
+          // background-color: skyblue;
+          // padding-left: 32px;
+          .content-tool {
+            height: 56px;
+            background-color: $bg-fff;
+            padding: 0 32px;
+            // border:1px solid $bg-line;
+            margin-left: 2px;
+            line-height: 56px;
+            .tool-where {
+              .ant-col {
+                margin-left: 16px;
+              }
+            }
+          }
+          .content-table {
+            position: relative;
+            border: 1px solid $bg-line;
+            background-color: $bg-fff;
+            height: 88.4%;
+            margin: 32px 32px 0;
+            .paginate-footer {
+              position: absolute;
+              width: 100%;
+              padding: 0 24px;
+              bottom: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    .common-info {
+      background-color: $bg-f5f5f5;
+      .layout-breadcrumb {
+        height: 40px;
+        line-height: 40px;
+        margin: 0 40px;
+      }
+      .common-info-box {
+        position: relative;
+        height:94.4%;
+        margin: 0px 40px 0;
+        background-color: $bg-fff;
+        padding: 48px 196px 0;
+        .info-box {
+          // height:534px;
+          max-height: 75%;
+          overflow: auto;
+          // background-color: red;
+          // border-bottom: 1px solid $bg-line;
+        }
+        .info-title {
+          font-size: 16px; /*no*/
+          font-weight: 500;
+          height: 30px;
+          line-height: 30px;
+        }
+        // .height-card {
+        //   height: 75px;
+        // }
+        .info-btn {
+          border-top: 1px solid $bg-line;
+
+          width: 1448px;
+          position: absolute;
+          bottom: 0px;
+          padding: 32px 80px 32px !important;
+        }
+      }
+    }
+  }
+}
+
+//公共侧边栏
+.myMenu {
+  .ant-row-flex {
+    // height:48px;
+    // line-height: 48px;
+    .ant-col {
+      font-size: 14px;
+      color: $bg-black;
+      font-weight: 500;
+    }
+  }
+}
+//文件上传样式
+.uploadModelClass {
+  width: 720px !important;
+}
