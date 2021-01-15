@@ -35,10 +35,11 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
-    "style-loader": "^2.0.0",
+    "mockjs": "^1.1.0",
     "px2rem-loader": "^0.1.9",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "style-loader": "^2.0.0",
     "vue-template-compiler": "^2.6.11"
   }
 }

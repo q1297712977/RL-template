@@ -79,11 +79,11 @@
               <!-- <a-form-model-item class="login-form-button">
                 <a-button type="primary" @click="onSubmit">立即登录</a-button>
               </a-form-model-item> -->
-                            <a-form-model-item
+              <a-form-model-item
                 style="margin-bottom: 3px"
                 class="login-form-button"
               >
-             <a-button type="primary" @click="onSubmit">立即登录</a-button>
+                <a-button type="primary" @click="onSubmit">立即登录</a-button>
               </a-form-model-item>
             </a-form-model>
 
@@ -312,43 +312,8 @@ export default {
         password: this.form.password
         // username:this.form.username
       };
-      this.$refs.form.validate(valid => {
-        if (valid) {
-          this.$api.login.login(params).then(res => {
-            if (res.code == 0) {
-              res = res.data;
-              _this.userToken = "Bearer " + res.access_token;
-              // 将用户token保存到vuex中
-              _this.$store.dispatch("loginIn", res).then(res => {
-                if (res) {
-                  this.getUser().then(res => {
-                    if (res.data.code == "0") {
-                      if (
-                        res.data.data.roleId == null ||
-                        res.data.data.roleId == ""
-                      ) {
-                        this.$message.error("账号不可登录,请联系管理员");
-                      } else {
-                        this.$router.push("/");
-                        this.$message.success("登录成功", () => {
-                          this.$api.system.addLog();
-                        });
-                      }
-                    }
-                  });
-                }
-              });
-            } else {
-              this.getCode();
-              this.form.verificatioc_code = "";
-              this.$message.error(res.message);
-            }
-          });
-        } else {
-          console.log("error submit!!");
-          return false;
-        }
-      });
+      this.$router.push("/");
+      this.$message.success("登录成功");
     },
     resetPassword() {
       let params = {
@@ -356,7 +321,7 @@ export default {
         mobile: this.reForm.mobile,
         password: this.reForm.newPassword
       };
-      console.log(params)
+      console.log(params);
       // console.log(this.$refs.reForm)
       // return
       this.$refs.reForm.validate(valid => {
@@ -475,7 +440,6 @@ export default {
       // letter-spacing:8px;
     }
     .login-form {
-
       .ant-form-item {
         padding-bottom: 0px !important;
         ::v-deep .ant-input {
@@ -495,7 +459,7 @@ export default {
         }
       }
       .form-content {
-        height:400px;
+        height: 400px;
 
         position: relative;
         .login-form-button {
@@ -512,7 +476,7 @@ export default {
           }
         }
         .login-to-forgot {
-           position: absolute;
+          position: absolute;
           bottom: 1%;
           .ant-col {
             text-align: center;

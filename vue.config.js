@@ -12,6 +12,10 @@ module.exports = {
           '^/api': '/'
         }
       },
+      '/virtual': {
+        target: 'https://www.fastmock.site/mock/f72db5d0ec43eb5440677fd3f9078e86/virtual',
+        changeOrigin: true,
+      },
     }
   },
   //配置less

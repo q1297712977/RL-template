@@ -7,12 +7,13 @@ import {
 } from 'ant-design-vue'; //引入 Ant for vue 的全局消息提醒
 // import router from '../router'  //引入vue 路由
 
-let apiUrl = ""
+let apiUrl = "/api"
 // let apiUrl = "/url"
 // let apiUrl = "/zl"
 // let apiUrl = "/ljs"
 if (process.env.NODE_ENV === "development") { //开发环境
-   apiUrl = "/api"
+  //  apiUrl = "/virtual"
+   apiUrl = "/virtual"
   console.log("当前环境：开发环境");
 } else if (process.env.NODE_ENV === "production") {
   console.log("当前环境：生产环境");
@@ -175,7 +176,6 @@ service.interceptors.response.use(
       message.error('请求超时,请检查网络')
       // return service.request(originalRequest);//重复请求一次
     }
-
     if (response) {
       if (response.status === 401) {
         if (router.currentRoute.name != 'login') {
